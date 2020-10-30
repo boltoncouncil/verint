@@ -326,7 +326,6 @@ h6,
   color: #0077b4 !important;
   background-size: 100% 100% !important;
   color: #0077b4 !important;
-  display: inline-block !important;
   position: relative !important;
   text-decoration: none !important;
   -webkit-transition: color 0.3s, background-size 0.2s ease-out !important;
@@ -432,6 +431,69 @@ h6,
 }
 
 /* Buttons */
+
+#dform_start.button,
+#dform_resume button {
+  font-weight: 400 !important;
+  text-align: center !important;
+  white-space: nowrap;
+  vertical-align: middle !important;
+  user-select: none;
+  border: 2px solid transparent !important;
+  padding: .625rem 1.5rem !important;
+  font-size: 1rem !important;
+  line-height: 1.1 !important;
+  border-radius: 4.5rem !important;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+  color: #fff !important;
+  background: none !important;
+  background-color: #0077b4  !important; 
+  border-color: #0077b4  !important;
+}
+
+
+#dform_start.button:hover,
+#dform_resume button:hover {
+  text-decoration: none !important;
+  color: #fff !important;
+  background-color: #044a7c  !important;
+  border-color: #044a7c  !important;
+}
+
+#dform_start.button:focus,
+#dform_resume button:focus {
+  outline: 0 !important;
+  background-color: #044a7c  !important;
+  border-color: #044a7c  !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important; 
+}
+
+
+#dform_start.button:disabled,
+#dform_resume button:disabled {
+   opacity: 0.5 !important;
+   color: #fff !important;
+   background-color: #0077b4 !important;
+   border-color: #0077b4 !important;
+   cursor: default !important;
+}
+
+
+#dform_start.button:not(:disabled):active,
+#dform_resume button:not(:disabled):active {
+    background-image: none !important;
+    color: #fff !important;
+	background-color: #044a7c !important;
+	border-color: #044a7c !important;
+}
+
+
+#dform_start.button:not(:disabled):active:focus, 
+#dform_resume button:not(:disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
+}
+
+/* Base class */
 
 .btn {
   font-weight: 400 !important;
