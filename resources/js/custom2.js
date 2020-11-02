@@ -85,7 +85,7 @@ function regexSearch(regex, selector){
 
 }
 
-$( document ).ready(function() {
+function applyStyles(){
 
 // mark up headings semantically using the appropriate <h#>
 	 replaceHeader('header1','h1');
@@ -137,15 +137,12 @@ $( document ).ready(function() {
 		//KS: call noResultsFound with 'this' set to the search element that triggered the event
 		selectResult.call($('[name="'+name+'_id"]'));
 		
-		
-		
 	 });
 
-	 
 	 // hide success message on complete
 	 $(formName()).on('_KDF_complete', function(event, kdf) {
 	     // hide the success message so that the ref number isn't displayed twice
 	     $('#dform_successMessage').addClass('display-none');
 	     
 	 });
-});
+}
