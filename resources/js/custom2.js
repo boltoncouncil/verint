@@ -1,4 +1,5 @@
-
+$( document ).ready(function() {
+	
 function formName(){
     
     //KS: I want triggers to work same way as api.js, so need this to get name
@@ -85,7 +86,15 @@ function regexSearch(regex, selector){
 
 }
 
-
+// add a non selectable option on search results to indicate if results found or not
+	 $(formName()).on('_KDF_search', function(event, kdf, response, type, name) {
+	     console.log('first')
+		//KS: call noResultsFound with 'this' set to the search element that triggered the event
+		noResultsFound.call($('[name="'+name+'_id"]'));
+		//KS: call noResultsFound with 'this' set to the search element that triggered the event
+		selectResult.call($('[name="'+name+'_id"]'));
+		
+	 });
 
 function applyStyles(){
 
@@ -130,15 +139,7 @@ function applyStyles(){
 	                               .addClass('btn btn-secondary')
 	                               .text('Search again');
 	 
-	// add a non selectable option on search results to indicate if results found or not
-	 $(formName()).on('_KDF_search', function(event, kdf, response, type, name) {
-	     console.log('first')
-		//KS: call noResultsFound with 'this' set to the search element that triggered the event
-		noResultsFound.call($('[name="'+name+'_id"]'));
-		//KS: call noResultsFound with 'this' set to the search element that triggered the event
-		selectResult.call($('[name="'+name+'_id"]'));
-		
-	 });
+	
 	
 
 	 // hide success message on complete
@@ -148,3 +149,5 @@ function applyStyles(){
 	     
 	 });
 }
+
+});	
