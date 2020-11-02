@@ -85,6 +85,7 @@ function regexSearch(regex, selector){
 
 }
 
+$( document ).ready(function() {
 
 // mark up headings semantically using the appropriate <h#>
 	 replaceHeader('header1','h1');
@@ -147,3 +148,4 @@ function regexSearch(regex, selector){
 	     $('#dform_successMessage').addClass('display-none');
 	     
 	 });
+});
