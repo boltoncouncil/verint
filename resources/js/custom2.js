@@ -128,6 +128,7 @@ function applyStyles(){
 	 // style reset icon on search widgets as a button
 	 $('.dform_widget_type_search').find('select').css('margin-right','0.45rem');
 	 $('.dform_widget_type_search').find('.dform_widget_search_closeresults')
+	                               .attr('tabindex','0')
 	                               .addClass('btn btn-secondary')
 	                               .text('Search again');
 	 
