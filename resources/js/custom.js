@@ -23,7 +23,7 @@ function defineDefaultStyle() {
   //KS: adds the recommended default styling - and acts a single location to change them
   //KS: for the love of StackExchange don't put 'all' or 'recommended' in here
   var recommended = [
-    "mchk",
+   /* "mchk",
     "chk",
     "rad",
     "txt",
@@ -38,9 +38,9 @@ function defineDefaultStyle() {
     "file",
     "btn",
     "search",
-    "highlightRequired",
+    "highlightRequired", */
     "search-no-results",
-    "field-label-right-align",
+   // "field-label-right-align",
     "txta-length",
     "txta-length-listener",
     "detailToggle",
