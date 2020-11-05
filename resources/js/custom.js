@@ -5,32 +5,17 @@ var debugStyle = false;
 /*  //KS: put in _KDF_ready - uses all the reccomended styles - can add optional
 applyStyle(['recommended']);
 //KS: see 'Non-recommended defaults' within 'defaultNewStyle(elements)' for optional defaults */
-function commonRegex() {
-  regexSearch("[0-9A-Za-z ]{2,}");
-  regexSearch(
-    "[0-9A-Za-z ]{1,}",
-    '.dform_widget_searchfield.txt-gov [data-customalias="forename"]'
-  );
-  regexSearch(
-    "^(([gG][iI][rR] {0,}0[aA]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$",
-    '[name="txt_postcode"] input'
-  );
-  regexSearch(
-    "^.{1,11}$",
-    '.dform_widget_searchfield.txt-gov [data-customalias="postcode"]'
-  ); //KS: Fikri to provide a more comprehensive version
-
-  /*/KS: to quickly chnage the create new individual validation
-	regexSearch('^([0-9A-Za-z ]{0,})(\S{1}$)',
-		    '#dform_widget_txt_c_forename, #dform_widget_txt_c_addressnumber');
-	regexSearch('^([0-9A-Za-z][0-9A-Za-z ]{0,})(\S{1}$)',
-		    '#dform_widget_txt_c_surname, #dform_widget_txt_c_addressline1, #dform_widget_txt_c_town');
+function commonRegex(){
+    // note back slashes have been escaped by adding extra back slash as jquery strips them out
+    regexSearch("[0-9A-Za-z ]{2,}");
+	regexSearch('[0-9A-Za-z ]{1,}',
+		    '.dform_widget_searchfield [data-customalias="forename"]');
 	regexSearch('^(([gG][iI][rR] {0,}0[aA]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$',
-		    '#dform_widget_txt_c_postcode');
-	regexSearch('^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
-		    '#dform_widget_eml_c_email');
-	regexSearch('^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$',
-		    '#dform_widget_tel_c_telephone');*/
+	 	    '.dform_widget_searchfield [data-customalias="postcode"], [name="txt_postcode"] input');
+	regexSearch('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$',
+		    '.dform_widget_type_email input[type="email"]'); 
+	regexSearch('^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$',
+		    '.dform_widget_type_tel input[type="tel"]');
 }
 
 function defineDefaultStyle() {
@@ -76,6 +61,14 @@ function defineDefaultStyle() {
 }
 
 function defaultNewStyle(elements) {
+	
+   replaceHeader('header1','h1');
+   replaceHeader('header2','h2');
+   replaceHeader('header3','h3');
+   replaceHeader('header4','h4');
+   replaceHeader('header5','h5');
+   replaceHeader('header6','h6');
+	
   //KS: adds styling to elemnts in an inefficent mannor but without the need to access custom.css
   //KS: adds the classes that are used for styling as well as for indication where functionility should be added in applyNewStyle
   if (elements === null) {
@@ -581,11 +574,12 @@ var updateStyleFunctions = {
   },
   "search-no-results": function (element) {
     //KS: param object op
-    element.find("select").css("margin-right", "0.25rem");
+    element.find("select").css("margin-right", "0.45rem");
     var el = element.find(
       ".dform_widget_search_closeresults"
     ); /*.not(":has(.btn-continue)");*/
-    el.addClass("btn-continue");
+    el.attr('tabindex','0');	  
+    el.addClass("btn btn-secondary");
     el.text("Search again");
   },
   "txt-hidden": function (element) {
@@ -788,7 +782,7 @@ var listenerFunctions = {
     console.log("txt-enter-trigger-btn called - disabled for testing");
     $(formName()).on(
       "keypress",
-      '.search-gov [type="text"], .txt-enter-trigger-btn [type="text"]',
+      '.search-gov [type="text"], .txt-enter-trigger-btn [type="text"], .dform_widget_type_search [type="text"]',
       function () {
         if (event.keyCode == 13) {
           $(this)
@@ -851,7 +845,17 @@ var listenerFunctions = {
             .focus();
         }
       });
-  },
+   },
+   resetSearch: function () {
+       $(document).on('click','.dform_widget_search_closeresults',function(){
+           $('[name="'+name+'_id"]').parent().parent().parent().removeClass('dform_widgeterror');
+           $('[name="'+name+'_id"]').parent().parent().siblings('.dform_validationMessage').hide();
+           //KDF.clearWidgetFieldError('[name="'+name+'_id"]', false);
+        });
+
+       //KS: trigger: '_style_listenerAdded, [listenerName]'
+       $(formName()).trigger("_style_listenerAdded", ["resetSearch"]);
+  },	
 };
 
 function formName() {
@@ -1258,3 +1262,22 @@ function postWindowTitleEvent(title) {
 /*
 CODE TO MERGE under structure
 */
+
+function replaceHeader(className,tag) {
+	$('.' + className).each(function() {
+        var id = $(this).attr('id');
+	    console.log(id);
+	    if (id) {
+            var header = document.getElementById(id);
+            var newHeader = document.createElement(tag);
+            var attrs = header.attributes;
+            for (var i=0;i<attrs.length;i++){
+                newHeader.setAttribute(attrs[i].name,attrs[i].value);
+            }
+            newHeader.innerHTML = header.innerHTML;
+            header.parentNode.replaceChild(newHeader, header);
+	    }
+    });
+}
+
+
