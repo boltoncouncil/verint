@@ -1,55 +1,129 @@
 /* Bolton font */
+
 @font-face {
-  font-family: "boltonregular";
-  src: url("../fonts/bolton_mac-webfont.woff2")
-      format("woff2"),
-    url("../fonts/bolton_mac-webfont.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'boltonregular';
+	src: url('https://boltoncouncil.github.io/verint/resources/fonts/bolton_mac-webfont.woff2') format("woff2"), url('https://boltoncouncil.github.io/verint/resources/fonts/bolton_mac-webfont.woff') format("woff");
+	font-weight: normal;
+	font-style: normal
 }
+
+html {
+	background-color: #fff;
+}
+
+
+/*
+-----------------------------------------------
+ Site header start
+-----------------------------------------------
+*/
+
+.site-header .identity {
+	font-size: 2.5em !important;
+	margin-bottom: 1.7rem;
+}
+
+.identity__text--welcome {
+	color: #4c5355;
+	margin: .25rem 0 .75rem;
+	display: none;
+}
+
+.site-header__container {
+	padding: 0.5rem 1rem;
+}
+
+.site-header .form--search {
+	padding-left: .75rem;
+	padding-bottom: 1.7rem;
+}
+
+.site-header__links .list,
+.site-header__links .download__meta-list {
+	margin-bottom: 0rem;
+	margin-right: 1rem;
+}
+
+
+/* Site header end
+-----------------------------------------------*/
+
+
+/*
 
 html,
 body {
-  max-width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
+	max-width: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 body {
-  color: #10191c;
-  padding-bottom: 1.25rem;
-  position: relative !important;
+	color: #10191c;
+	padding-bottom: 1.25rem;
+	position: relative !important;
 }
 
 body::after {
-  background-image: url("../images/dna-strand.svg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 1.25rem;
-  left: 0;
-  position: absolute;
-  width: 100%;
+	background-image: url("https://www.bolton.gov.uk/site/dist/images/dna-strand.svg");
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 1.25rem;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+
+html,
+body {
+	overflow-x: initial;
+}
+
+#dform_top a {
+	background: none !important;
 }
 
 #dform_container {
-  font-family: "Roboto", sans-serif;
-  padding: 20px;
-  background-color: #ffffff;
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.4;
+	font-family: "Roboto", sans-serif;
+	background-color: #ffffff;
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+#dform_container {
+	max-width: 1212px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
+}
+
+#dform_container::after {
+	clear: both;
+	content: '';
+	display: table
 }
 
 #dform_container .container {
-  max-width: 1212px;
-  margin-left: auto;
-  margin-right: auto;
+	padding: 0px;
+	margin: 0;
 }
+
+
+/*
+-----------------------------------------------
+ Headinngs start
+-----------------------------------------------
+*/
 
 h1,
 .h1,
@@ -69,813 +143,718 @@ h5,
 h6,
 .h6,
 .header6 {
-  color: #10191c !important;
-  font-family: "boltonregular", Georgia, serif !important;
-  font-weight: 400 !important;
-  line-height: 1.1 !important;
+	color: #10191c !important;
+	font-family: "boltonregular", Georgia, serif !important;
+	font-weight: 400 !important;
+	line-height: 1.1 !important;
 }
 
 h1,
 .h1,
 .header1 {
-  font-size: 2.5rem !important;
-  margin: 2rem 0 1.5rem !important;
+	font-size: 2.5rem !important;
+	margin: 2rem 0 1.5rem !important;
 }
 
 @media screen and (max-width: 959px) {
-  h1,
-  .h1,
-  .header1 {
-    font-size: 1.875rem !important;
-  }
+	h1,
+	.h1,
+	.header1 {
+		font-size: 1.875rem !important;
+	}
 }
 
 .h1 {
-  display: block !important;
+	display: block !important;
 }
 
 h2,
 .h2,
 .header2 {
-  font-size: 2.25rem !important;
-  margin: 1.5rem 0 0.75rem !important;
+	font-size: 2.25rem !important;
+	margin: 1.5rem 0 .75rem !important;
 }
 
 h2,
 .h2,
 .header2 {
-  color: #4c5355 !important;
+	color: #4c5355 !important;
 }
 
 @media screen and (max-width: 959px) {
-  h2,
-  .h2,
-  .header2 {
-    font-size: 1.6875rem !important;
-  }
+	h2,
+	.h2,
+	.header2 {
+		font-size: 1.6875rem !important;
+	}
 }
 
-h2 + h3,
-.h2 + h3,
-.header2 + h3,
-h2 + .h3,
-h2 + .header3,
-.h2 + .h3,
-.header2 + .header3 {
-  margin: 0.5rem 0 1.5rem !important;
+h2+h3,
+.h2+h3,
+.header2+h3,
+h2+.h3,
+h2+.header3,
+.h2+.h3,
+.header2+.header3 {
+	margin: .5rem 0 1.5rem !important;
 }
 
 .h2 {
-  display: block !important;
+	display: block !important;
 }
 
 h3,
 .h3,
 .header3 {
-  font-size: 2rem;
-  margin: 1rem 0 0.375rem !important;
+	font-size: 2rem !important;
+	margin: 1rem 0 .375rem !important;
 }
 
 h3,
 .h3,
 .header3 {
-  color: #4c5355 !important;
+	color: #4c5355 !important;
 }
 
 @media screen and (max-width: 959px) {
-  h3,
-  .h3,
-  .header3 {
-    font-size: 1.5rem !important;
-  }
+	h3,
+	.h3,
+	.header3 {
+		font-size: 1.5rem !important;
+	}
 }
 
-h3 + h4,
-.h3 + h4,
-.header3 + h4,
-h3 + .h4,
-h3 + .header4,
-.h3 + .h4,
-.header3 + .header4 {
-  margin: 0.25rem 0 1rem !important;
+h3+h4,
+.h3+h4,
+.header3+h4,
+h3+.h4,
+h3+.header4,
+.h3+.h4,
+.header3+.header4 {
+	margin: .25rem 0 1rem !important;
 }
 
 .h3 {
-  display: block !important;
+	display: block !important;
 }
 
 h4,
 .h4,
 .header4 {
-  font-size: 1.75rem !important;
-  margin: 2rem 0 0 !important;
+	font-size: 1.75rem !important;
+	margin: 2rem 0 0 !important;
 }
 
 @media screen and (max-width: 959px) {
-  h4,
-  .h4,
-  .header4 {
-    font-size: 1.3125rem !important;
-  }
+	h4,
+	.h4,
+	.header4 {
+		font-size: 1.3125rem !important;
+	}
 }
 
 .h4 {
-  display: block !important;
+	display: block !important;
 }
 
 h5,
 .h5,
 .header5 {
-  font-size: 1.5rem !important;
-  margin: 0.75rem 0 0 !important;
+	font-size: 1.5rem !important;
+	margin: .75rem 0 0 !important;
 }
 
 h5,
 .h5,
 .header5 {
-  color: #4c5355 !important;
+	color: #4c5355 !important;
 }
 
 @media screen and (max-width: 959px) {
-  h5,
-  .h5,
-  .header5 {
-    font-size: 1.125rem !important;
-  }
+	h5,
+	.h5,
+	.header5 {
+		font-size: 1.125rem !important;
+	}
 }
 
 .h5 {
-  display: block !important;
+	display: block !important;
 }
 
 h6,
 .h6,
 .header6 {
-  font-size: 1.25rem !important;
-  margin: 0.5rem 0 0 !important;
+	font-size: 1.25rem !important;
+	margin: .5rem 0 0 !important;
 }
 
 h6,
 .h6,
 .header6 {
-  color: #4c5355 !important;
+	color: #4c5355 !important;
 }
 
 @media screen and (max-width: 959px) {
-  h6,
-  .h6,
-  .header6 {
-    font-size: 1rem !important;
-  }
+	h6,
+	.h6,
+	.header6 {
+		font-size: 1rem !important;
+	}
 }
 
 .h6 {
-  display: block !important;
+	display: block !important;
 }
 
-/* Grid overide classes */
-#dform_container .container > .col-1,
-#dform_container .container > .col-2,
-#dform_container .container > .col-3,
-#dform_container .container > .col-4,
-#dform_container .container > .col-5,
-#dform_container .container > .col-6,
-#dform_container .container > .col-7,
-#dform_container .container > .col-8 {
-  margin-right: 3.8%;
-  float: left;
-  min-height: 1px;
-}
 
-#dform_container .container > .col-1 {
-  width: 4.85% !important;
-}
+/* Headings end
+-----------------------------------------------*/
 
-#dform_container .container > .col-2 {
-  width: 13.45% !important;
-}
 
-#dform_container .container > .col-3 {
-  width: 22.05% !important;
-}
-
-#dform_container .container > .col-4 {
-  width: 30.75% !important;
-}
-
-#dform_container .container > .col-5 {
-  width: 39.45% !important;
-}
-
-#dform_container .container > .col-6 {
-  width: 48% !important;
-}
-
-#dform_container .container > .col-7 {
-  width: 56.75% !important;
-}
-#dform_container .container > .col-8 {
-  width: 65.4% !important;
-}
-#dform_container .container > .last {
-  margin-right: 0px;
-}
-
-@media handheld, only screen and (max-width: 768px) {
-  #dform_container .container > .col-1,
-  #dform_container .container > .col-2,
-  #dform_container .container > .col-3,
-  #dform_container .container > .col-4,
-  #dform_container .container > .col-5,
-  #dform_container .container > .col-6,
-  #dform_container .container > .col-7,
-  #dform_container .container > .col-4,
-  #dform_container .container > .col-8 {
-    width: auto !important;
-    float: none !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-}
+/*
+-----------------------------------------------
+ Anchors start
+-----------------------------------------------
+*/
 
 #dform_container a {
-  background-image: -webkit-linear-gradient(
-    bottom,
-    #0077b4 0,
-    #0077b4 1px,
-    transparent 0.07rem,
-    transparent 100%
-  ) !important;
-  background-image: -o-linear-gradient(
-    bottom,
-    #0077b4 0,
-    #0077b4 1px,
-    transparent 0.07rem,
-    transparent 100%
-  ) !important;
-  background-image: linear-gradient(
-    to top,
-    #0077b4 0,
-    #0077b4 1px,
-    transparent 0.07rem,
-    transparent 100%
-  ) !important;
-  background-repeat: no-repeat !important;
-  color: #0077b4 !important;
-  background-size: 100% 100% !important;
-  color: #0077b4 !important;
-  position: relative !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.3s, background-size 0.2s ease-out !important;
-  -o-transition: color 0.3s, background-size 0.2s ease-out !important;
-  transition: color 0.3s, background-size 0.2s ease-out !important;
-  z-index: 1 !important;
+	background-image: -webkit-linear-gradient(bottom, #0077b4 0, #0077b4 1px, transparent 0.07rem, transparent 100%);
+	background-image: -o-linear-gradient(bottom, #0077b4 0, #0077b4 1px, transparent 0.07rem, transparent 100%);
+	background-image: linear-gradient(to top, #0077b4 0, #0077b4 1px, transparent 0.07rem, transparent 100%);
+	background-repeat: no-repeat;
+	color: #0077b4;
+	background-size: 100% 100%;
+	color: #0077b4;
+	position: relative;
+	display: inline;
+	text-decoration: none !important;
+	-webkit-transition: color .3s, background-size .2s ease-out;
+	-o-transition: color .3s, background-size .2s ease-out;
+	transition: color .3s, background-size .2s ease-out;
+	z-index: 1;
 }
 
 #dform_container a:hover,
 #dform_container a:focus {
-  -webkit-animation: underlineSwap 0.3s ease-out !important;
-  animation: underlineSwap 0.3s ease-out !important;
-  background-image: -webkit-linear-gradient(
-    bottom,
-    #008142 0,
-    #008142 1px,
-    transparent 0.07rem,
-    transparent 100%
-  ) !important;
-  background-image: -o-linear-gradient(
-    bottom,
-    #008142 0,
-    #008142 1px,
-    transparent 0.07rem,
-    transparent 100%
-  ) !important;
-  background-image: linear-gradient(
-    to top,
-    #008142 0,
-    #008142 1px,
-    transparent 0.07rem,
-    transparent 100%
-  ) !important;
-  background-size: 100% 100% !important;
+	-webkit-animation: underlineSwap .3s ease-out;
+	animation: underlineSwap .3s ease-out;
+	background-image: -webkit-linear-gradient(bottom, #008142 0, #008142 1px, transparent 0.07rem, transparent 100%);
+	background-image: -o-linear-gradient(bottom, #008142 0, #008142 1px, transparent 0.07rem, transparent 100%);
+	background-image: linear-gradient(to top, #008142 0, #008142 1px, transparent 0.07rem, transparent 100%);
+	background-size: 100% 100%;
 }
 
 #dform_container a::after {
-  -webkit-box-shadow: 0 0 0 2px transparent !important;
-  box-shadow: 0 0 0 2px transparent !important;
-  content: "" !important;
-  position: absolute !important;
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
-  -webkit-transition: -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
-  transition: -webkit-box-shadow 0.3s, -webkit-transform 0.3s !important;
-  -o-transition: box-shadow 0.3s, transform 0.3s !important;
-  transition: box-shadow 0.3s, transform 0.3s !important;
-  transition: box-shadow 0.3s, transform 0.3s, -webkit-box-shadow 0.3s,
-    -webkit-transform 0.3s !important;
-  -webkit-transition-timing-function: cubic-bezier(
-    0.75,
-    0,
-    0.125,
-    1
-  ) !important;
-  -o-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1) !important;
-  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1) !important;
-  width: calc(100% + 0.375rem) !important;
-  z-index: -1 !important;
-  bottom: -1px;
-  height: calc(100% + 2px) !important;
-  left: -1px !important;
-  width: calc(100% + 2px) !important;
+	-webkit-box-shadow: 0 0 0 2px transparent;
+	box-shadow: 0 0 0 2px transparent;
+	content: '';
+	position: absolute;
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-transition: -webkit-box-shadow .3s, -webkit-transform .3s;
+	transition: -webkit-box-shadow .3s, -webkit-transform .3s;
+	-o-transition: box-shadow .3s, transform .3s;
+	transition: box-shadow .3s, transform .3s;
+	transition: box-shadow .3s, transform .3s, -webkit-box-shadow .3s, -webkit-transform .3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	-o-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	width: calc(100% + .375rem);
+	z-index: -1;
+	bottom: -1px;
+	height: calc(100% + 2px);
+	left: -1px;
+	width: calc(100% + 2px)
 }
 
 #dform_container a:focus {
-  outline: none !important;
+	outline: none
 }
 
 #dform_container a:focus::after {
-  -webkit-box-shadow: 0 0 0 2px #fbba07 !important;
-  box-shadow: 0 0 0 2px #fbba07 !important;
-  -webkit-transform: scale(1) !important;
-  -ms-transform: scale(1) !important;
-  transform: scale(1) !important;
+	-webkit-box-shadow: 0 0 0 2px #fbba07;
+	box-shadow: 0 0 0 2px #fbba07;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1)
 }
 
 #dform_container a:visited {
-  color: #aa6000 !important;
+	color: #aa6000
 }
 
 #dform_container a:hover,
 #dform_container a:focus,
 #dform_container a:active {
-  color: #008142 !important;
+	color: #008142
 }
 
 #dform_container a:focus {
-  outline: 0 !important;
-}
-
-/* List */
-
-#dform_container ul > li,
-#dform_container ol > li {
-  margin-bottom: 5px;
-}
-
-#dform_container .dform_widget_type_html ul > li::marker,
-#dform_container .dform_widget_type_html ol > li::marker {
-  font-size: 20px;
-}
-
-/* Save and Resume page overides */
-
-#dform_start,
-#dform_resume button {
-  font-weight: 400 !important;
-  text-align: center !important;
-  white-space: nowrap;
-  vertical-align: middle !important;
-  user-select: none;
-  border: 2px solid transparent !important;
-  padding: .625rem 1.5rem !important;
-  font-size: 1rem !important;
-  line-height: 1.1 !important;
-  border-radius: 4.5rem !important;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
-  color: #fff !important;
-  background: none !important;
-  background-color: #0077b4  !important; 
-  border-color: #0077b4  !important;
+	outline: 0
 }
 
 
-#dform_start:hover,
-#dform_resume button:hover {
-  text-decoration: none !important;
-  color: #fff !important;
-  background-color: #044a7c  !important;
-  border-color: #044a7c  !important;
+/* Anchors end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Lists start
+-----------------------------------------------
+*/
+
+#dform_container ul>li,
+#dform_container ol>li {
+	margin-bottom: 5px;
 }
 
-#dform_start:focus,
-#dform_resume button:focus {
-  outline: 0 !important;
-  background-color: #044a7c  !important;
-  border-color: #044a7c  !important;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important; 
-}
-
-
-#dform_start:disabled,
-#dform_resume button:disabled {
-   opacity: 0.5 !important;
-   color: #fff !important;
-   background-color: #0077b4 !important;
-   border-color: #0077b4 !important;
-   cursor: default !important;
+#dform_container .dform_widget_type_html ul>li::marker,
+#dform_container .dform_widget_type_html ol>li::marker {
+	font-size: 20px;
 }
 
 
-#dform_start:not(:disabled):active,
-#dform_resume button:not(:disabled):active {
-    background-image: none !important;
-    color: #fff !important;
-	background-color: #044a7c !important;
-	border-color: #044a7c !important;
-}
+/* Lists end
+-----------------------------------------------*/
 
 
-#dform_start:not(:disabled):active:focus, 
-#dform_resume button:not(:disabled):active:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
+/*
+-----------------------------------------------
+ Save and resume page overides start
+-----------------------------------------------
+*/
+
+#dform_password_entry {
+	border-radius: 0 !important;
 }
 
 #dform_resume input {
-    width: auto !important;
+	width: auto !important;
 }
 
 
-/* Buttons */
+/* Save and resume page overides end
+-----------------------------------------------*/
 
-#dform_start.button,
-#dform_resume button {
-  font-weight: 400 !important;
-  text-align: center !important;
-  white-space: nowrap;
-  vertical-align: middle !important;
-  user-select: none;
-  border: 2px solid transparent !important;
-  padding: .625rem 1.5rem !important;
-  font-size: 1rem !important;
-  line-height: 1.1 !important;
-  border-radius: 4.5rem !important;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
-  color: #fff !important;
-  background: none !important;
-  background-color: #0077b4  !important; 
-  border-color: #0077b4  !important;
+
+/*
+-----------------------------------------------
+ Buttons start
+-----------------------------------------------
+*/
+
+#dform_container .btn,
+#dform_container .button,
+#dform_container input[type="submit"],
+#dform_container button {
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border: 2px solid transparent;
+	padding: .625rem 1.5rem;
+	font-size: 1rem;
+	line-height: 1.1;
+	border-radius: 4.5rem;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+	color: #fff;
+	background: none;
+	background-color: #0077b4;
+	border-color: #0077b4;
+	margin-bottom: 20px;
+}
+
+#dform_container .btn:hover,
+#dform_container .button:hover,
+#dform_container input[type="submit"]:hover,
+#dform_container button:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #044a7c;
+	border-color: #044a7c;
+	box-shadow: none;
+}
+
+#dform_container .btn:focus,
+#dform_container .button:focus,
+#dform_container input[type="submit"]:focus,
+#dform_container button:focus {
+	outline: 0;
+	color: #fff;
+	text-decoration: none;
+	background-color: #044a7c;
+	border-color: #044a7c;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+#dform_container .btn:disabled,
+#dform_container .button:disabled,
+#dform_container input[type="submit"]:disabled,
+#dform_container button:disabled {
+	opacity: 0.5;
+	cursor: default;
+	color: #fff;
+	background-color: #0077b4;
+	border-color: #0077b4;
+}
+
+#dform_container .btn:not(:disabled):active,
+#dform_container .button:not(:disabled):active,
+#dform_container input[type="submit"]:active,
+#dform_container button:not(:disabled):active {
+	background-image: none;
+	color: #fff;
+	background-color: #044a7c;
+	border-color: #044a7c;
+}
+
+#dform_container .btn:not(:disabled):active:focus,
+#dform_container .button:not(:disabled):active:focus,
+#dform_container input[type="submit"]:not(:disabled):active:focus,
+#dform_container button:not(:disabled):active:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
 
-#dform_start.button:hover,
-#dform_resume button:hover {
-  text-decoration: none !important;
-  color: #fff !important;
-  background-color: #044a7c  !important;
-  border-color: #044a7c  !important;
-}
+/* Button continue
+-----------------------------------------------*/
 
-#dform_start.button:focus,
-#dform_resume button:focus {
-  outline: 0 !important;
-  background-color: #044a7c  !important;
-  border-color: #044a7c  !important;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important; 
-}
-
-
-#dform_start.button:disabled,
-#dform_resume button:disabled {
-   opacity: 0.5 !important;
-   color: #fff !important;
-   background-color: #0077b4 !important;
-   border-color: #0077b4 !important;
-   cursor: default !important;
-}
-
-
-#dform_start.button:not(:disabled):active,
-#dform_resume button:not(:disabled):active {
-    background-image: none !important;
-    color: #fff !important;
-	background-color: #044a7c !important;
-	border-color: #044a7c !important;
-}
-
-
-#dform_start.button:not(:disabled):active:focus, 
-#dform_resume button:not(:disabled):active:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
-}
-
-/* Base class */
-
-.btn {
-  font-weight: 400 !important;
-  text-align: center !important;
-  white-space: nowrap;
-  vertical-align: middle !important;
-  user-select: none;
-  border: 2px solid transparent !important;
-  padding: 0.625rem 1.5rem !important;
-  font-size: 1rem !important;
-  line-height: 1.1 !important;
-  border-radius: 4.5rem !important;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
-}
-
-.btn:hover,
-.btn:focus {
-  text-decoration: none !important;
-}
-
-.btn:focus {
-  outline: 0 !important;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
-}
-
-.btn:disabled {
-  opacity: 0.5 !important;
-}
-
-.btn:disabled {
-  cursor: default !important;
-}
-
-.btn:not(:disabled):active {
-  background-image: none !important;
-}
-
-/* Button primary */
-
-.btn-primary {
-  color: #fff !important;
-  background: none !important;
-  background-color: #0077b4 !important;
-  border-color: #0077b4 !important;
-  margin-bottom: 32px !important;
-}
-
-.btn-primary:hover {
-  color: #fff !important;
-  background-color: #044a7c !important;
-  border-color: #044a7c !important;
-}
-
-.btn-primary:focus {
-  background-color: #044a7c !important;
-  border-color: #044a7c !important;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
-}
-
-.btn-primary:disabled {
-  color: #fff !important;
-  background-color: #0077b4 /* #007bff */ !important;
-  border-color: #0077b4 /* #007bff */ !important;
-}
-
-.btn-primary:not(:disabled):active {
-  color: #fff !important;
-  background-color: #044a7c !important;
-  border-color: #044a7c !important;
-}
-
-.btn-primary:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
-}
-
-/* Button secondary */
-
-.btn-secondary {
-  color: #0077b4 !important;
-  background: none !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border-color: #0077b4 !important;
-}
-
-.btn-secondary:hover {
-  color: #fff !important;
-  background-color: #044a7c !important;
-  border-color: #044a7c !important;
-}
-
-.btn-secondary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
-}
-
-.btn-secondary:disabled {
-  color: #0077b4 !important;
-  background-color: transparent !important;
-}
-
-.btn-secondary:not(:disabled):active {
-  color: #fff !important;
-  background-color: #044a7c !important;
-  border-color: #044a7c !important;
-}
-
-.btn-secondary:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
-}
-
-/* Button danger */
-
-.btn-danger {
-  color: #fff !important;
-  background: none !important;
-  background-color: #dc3545 !important;
-  border-color: #dc3545 !important;
-}
-
-.btn-danger:hover {
-  color: #fff !important;
-  background-color: #c82333 !important;
-  border-color: #bd2130 !important;
-}
-
-.btn-danger:focus,
-.btn-danger.focus {
-  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5) !important;
-}
-
-.btn-danger:disabled {
-  color: #fff !important;
-  background-color: #dc3545 !important;
-  border-color: #dc3545 !important;
-}
-
-.btn-danger:not(:disabled):active {
-  color: #fff !important;
-  background-color: #bd2130 !important;
-  border-color: #b21f2d !important;
-}
-
-.btn-danger:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5) !important;
-}
-
-/* Button link */
-
-.btn-link {
-  border-radius: 0 !important;
-  font-weight: 400 !important;
-  color: #0077b4 !important;
-  background: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  text-decoration: underline !important;
-  line-height: 1.1 !important;
-}
-
-.btn-link:hover,
-.btn-link:focus {
-  color: #008142 !important;
-  background-color: transparent !important;
-  border-color: transparent !important;
-  text-decoration: underline !important;
-}
-
-.btn-link:focus {
-  box-shadow: 0 0 0 2px #fbba07 !important;
-  text-decoration: underline !important;
-}
-
-.btn-link:disabled {
-  color: #6c757d !important;
-}
-
-/* Button back */
-
-.btn-back {
-  position: relative !important;
-  border-radius: 0 !important;
-  margin-top: 15px !important;
-  margin-bottom: 15px !important;
-  padding-left: 14px !important;
-  background: none !important;
-  border: none !important;
-  cursor: pointer !important;
-  text-decoration: underline !important;
-  box-shadow: none !important;
-  border-color: rgba(0, 0, 0, 0) !important;
-  outline: none !important;
-  padding: 2.5px 5px 2.5px 15px !important;
-  color: #0b0c0c !important;
-}
-
-.btn-back:hover,
-.btn-back:active,
-.btn-back:focus {
-  color: #0b0c0c !important;
-  text-decoration: underline !important;
-}
-
-.btn-back:focus {
-  box-shadow: 0 0 0 2px #fbba07 !important;
-  text-decoration: underline !important;
-}
-
-.btn-back:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 3px;
-  width: 7px;
-  height: 7px;
-  margin: auto 0;
-  -webkit-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  transform: rotate(225deg);
-  border: solid;
-  border-width: 1px 1px 0 0;
-  border-color: #505a5f;
-}
-
-.btn-back:after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0;
-  bottom: 0px;
-  left: 0;
-}
-
-/* Button start */
-
-.btn-start {
-  position: relative !important;
-  color: #fff !important;
-  background: none !important;
-  background-color: #0077b4 /* #007bff */ !important;
-  border-color: #0077b4 /* #007bff */ !important;
-  margin-bottom: 32px !important;
-  padding-right: 2.5rem !important;
-}
-
-.btn-start:hover {
-  color: #fff !important;
-  background-color: #044a7c /*#0069d9*/ !important;
-  border-color: #044a7c /*#0062cc*/ !important;
-}
-
-.btn-start:focus {
-  color: #fff !important;
-  background-color: #044a7c !important;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
-}
-
-.btn-start:disabled {
-  color: #fff !important;
-  background-color: #0077b4 /* #007bff */ !important;
-  border-color: #0077b4 /* #007bff */ !important;
-}
-
-.btn-start:not(:disabled):active {
-  color: #fff !important;
-  background-color: #044a7c !important;
-  border-color: #044a7c !important;
-}
-
-.btn-start:not(:disabled):active:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5) !important;
-}
-
-.btn-start:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0;
-  bottom: 0px;
-  left: 0;
-}
-
-.btn-start:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 25px;
-  width: 8px;
-  height: 8px;
-  margin: auto 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border: solid;
-  border-width: 2px 2px 0 0;
-  border-color: #fff;
+#dform_container .btn-continue {
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
-  .btn-start {
-    width: 100% !important;
-  }
-
-  .btn-start {
-    margin-bottom: 22px !important;
-  }
+	#dform_container .btn-continue {
+		margin-bottom: 20px;
+	}
 }
 
-/* Field spacing */
+
+/* Button secondary
+   Button cancel save
+-----------------------------------------------*/
+
+#dform_container button#dform_cancel_save,
+#dform_container .btn-secondary {
+	color: #0077b4;
+	background-color: transparent;
+	background-image: none;
+	border-color: #0077b4;
+}
+
+#dform_container button#dform_cancel_save:hover,
+#dform_container .btn-secondary:hover {
+	color: #fff;
+	background-color: #044a7c;
+	border-color: #044a7c;
+}
+
+#dform_container button#dform_cancel_save:focus,
+#dform_container .btn-secondary:focus {
+	color: #fff;
+	background-color: #044a7c;
+	border-color: #044a7c;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+#dform_container button#dform_cancel_save:disabled,
+#dform_container .btn-secondary:disabled {
+	color: #0077b4;
+	background-color: transparent;
+	border-color: #0077b4;
+}
+
+#dform_container button#dform_cancel_save:not(:disabled):active,
+#dform_container .btn-secondary:not(:disabled):active {
+	color: #fff;
+	background-color: #044a7c;
+	border-color: #044a7c;
+}
+
+#dform_container button#dform_cancel_save:not(:disabled):active:focus,
+#dform_container .btn-secondary:not(:disabled):active:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+
+/* Button danger
+-----------------------------------------------*/
+
+#dform_container .btn-danger {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+#dform_container .btn-danger:hover {
+	color: #fff;
+	background-color: #c82333;
+	border-color: #bd2130;
+}
+
+#dform_container .btn-danger:focus {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+#dform_container .btn-danger:disabled {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+#dform_container .btn-danger:not(:disabled):active {
+	color: #fff;
+	background-color: #bd2130;
+	border-color: #b21f2d;
+}
+
+#dform_container .btn-danger:not(:disabled):active:focus {
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+
+/* Button link
+   Button change
+-----------------------------------------------*/
+
+#dform_container .btn-change,
+#dform_container .btn-link {
+	border: none;
+	border-radius: 0 !important;
+	font-weight: 400;
+	color: #0077b4;
+	background-color: transparent;
+	box-shadow: none;
+	padding: 1px;
+	text-decoration: underline;
+	line-height: 1.1;
+	margin: 0;
+}
+
+#dform_container .btn-change:hover,
+#dform_container .btn-link:hover,
+#dform_container .btn-link:focus {
+	color: #008142;
+	background-color: transparent;
+	border-color: transparent;
+	text-decoration: underline;
+}
+
+#dform_container .btn-change:focus,
+#dform_container .btn-link:focus {
+	box-shadow: 0 0 0 2px #fbba07;
+	text-decoration: underline;
+}
+
+#dform_container .btn-change:disabled,
+#dform_container .btn-link:disabled {
+	color: #6c757d;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#dform_container .btn-change:not(:disabled):active,
+#dform_container .btn-link:not(:disabled):active {
+	color: #008142;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#dform_container .btn-change:not(:disabled):active:focus,
+#dform_container .btn-link:not(:disabled):active:focus {
+	box-shadow: 0 0 0 2px #fbba07;
+}
+
+#dform_container .btn-change {
+	margin-top: 15px !important;
+}
+
+@media (max-width: 768px) {
+	#dform_container .btn-change {
+		float: left !important;
+		margin-top: 0px !important;
+		margin-bottom: 15px !important;
+	}
+}
+
+
+/* Button back
+-----------------------------------------------*/
+
+#dform_container .btn-back {
+	position: relative;
+	border-radius: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-left: 14px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	text-decoration: underline;
+	box-shadow: none;
+	border-color: rgba(0, 0, 0, 0);
+	outline: none;
+	padding: 2.5px 5px 2.5px 15px;
+	color: #0b0c0c;
+}
+
+#dform_container .btn-back:hover,
+#dform_container .btn-back:active,
+#dform_container .btn-back:focus {
+	color: #0b0c0c;
+	text-decoration: underline;
+	background-color: transparent;
+	border-color: rgba(0, 0, 0, 0);
+}
+
+#dform_container .btn-back:focus {
+	box-shadow: 0 0 0 2px #fbba07;
+	text-decoration: underline;
+}
+
+#dform_container .btn-back:disabled {
+	color: #0b0c0c;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#dform_container .btn-back:not(:disabled):active {
+	color: #0b0c0c;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#dform_container .btn-back:not(:disabled):active:focus {
+	box-shadow: 0 0 0 2px #fbba07;
+}
+
+#dform_container .btn-back:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 3px;
+	width: 7px;
+	height: 7px;
+	margin: auto 0;
+	-webkit-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	transform: rotate(225deg);
+	border: solid;
+	border-width: 1px 1px 0 0;
+	border-color: #505a5f
+}
+
+#dform_container .btn-back:after {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0;
+	bottom: 0px;
+	left: 0
+}
+
+
+/* Button start
+-----------------------------------------------*/
+
+#dform_container .btn-start {
+	position: relative !important;
+	color: #fff;
+	background-color: #0077b4;
+	border-color: #0077b4;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding-right: 2.5rem;
+}
+
+#dform_container .btn-start:hover {
+	color: #fff;
+	background-color: #044a7c;
+	border-color: #044a7c;
+}
+
+#dform_container .btn-start:focus {
+	color: #fff;
+	background-color: #044a7c;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+#dform_container .btn-start:disabled {
+	color: #fff;
+	background-color: #0077b4;
+	border-color: #0077b4;
+}
+
+#dform_container .btn-start:not(:disabled):active {
+	color: #fff;
+	background-color: #044a7c;
+	border-color: #044a7c;
+}
+
+#dform_container .btn-start:not(:disabled):active:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+#dform_container .btn-start:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0;
+	bottom: 0px;
+	left: 0
+}
+
+#dform_container .btn-start:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 25px;
+	width: 8px;
+	height: 8px;
+	margin: auto 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	border: solid;
+	border-width: 2px 2px 0 0;
+	border-color: #fff
+}
+
+@media (max-width: 768px) {
+	#dform_container .btn-start {
+		width: 100%;
+	}
+	#dform_container .btn-start {
+		margin-bottom: 20px;
+	}
+}
+
+
+/* Buttons end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Field overides start
+-----------------------------------------------
+*/
+
+
+/* Field spacing 
+-----------------------------------------------*/
 
 #dform_container .dform_widget_type_text,
 #dform_container .dform_widget_type_select,
@@ -885,517 +864,995 @@ h6,
 #dform_container .dform_widget_type_number,
 #dform_container .dform_widget_type_date,
 #dform_container .dform_widget_type_time,
-#dform_container .dform_widget_searchfield,
-#dform_container .form-group {
-  margin-bottom: 30px;
+#dform_container .dform_widget_searchfield {
+	margin-bottom: 30px;
 }
 
 #dform_container .dform_widget_searchfield:last-of-type {
-  margin-bottom: 0px !important;
+	margin-bottom: 0px !important;
 }
 
 @media (max-width: 768px) {
-  #dform_container .dform_widget_type_text,
-  #dform_container .dform_widget_type_select,
-  #dform_container .dform_widget_type_textarea,
-  #dform_container .dform_widget_type_email,
-  #dform_container .dform_widget_type_tel,
-  #dform_container .dform_widget_type_number,
-  #dform_container .dform_widget_type_date,
-  #dform_container .dform_widget_type_time,
-  #dform_container .dform_widget_searchfield,
-  #dform_container .form-group {
-    margin-bottom: 30px;
-  }
+	#dform_container .dform_widget_type_text,
+	#dform_container .dform_widget_type_select,
+	#dform_container .dform_widget_type_textarea,
+	#dform_container .dform_widget_type_email,
+	#dform_container .dform_widget_type_tel,
+	#dform_container .dform_widget_type_number,
+	#dform_container .dform_widget_type_date,
+	#dform_container .dform_widget_type_time,
+	#dform_container .dform_widget_searchfield {
+		margin-bottom: 30px;
+	}
 }
+
+
+/* Resize labels
+-----------------------------------------------*/
 
 #dform_container label {
-  font-size: 1.125rem;
-  margin-bottom: 10px;
-  line-height: 1.2rem;
+	font-size: 1.125rem;
+	margin-bottom: 10px;
+	line-height: 1.2rem;
 }
+
+
+/* Resize legends
+-----------------------------------------------*/
 
 #dform_container legend {
-  font-size: 1.125rem;
-  margin-bottom: 8px;
+	font-size: 1.125rem;
+	margin-bottom: 8px;
 }
 
+
+/* Customise help text
+-----------------------------------------------*/
+
 #dform_container .helptext {
-  color: #505a5f;
-  font-style: normal !important;
-  margin-bottom: 15px;
-  line-height: 1.2rem;
+	color: #505a5f;
+	font-style: normal !important;
+	margin-bottom: 15px;
+	line-height: 1.2rem;
 }
+
+
+/* Make inputs more prominent
+----------------------------------------------*/
 
 #dform_container input,
 #dform_container select,
 #dform_container textarea {
-  border: 2px solid #0b0c0c !important;
-  width: 100%;
+	border: 2px solid #0b0c0c !important;
+	width: 100%;
 }
 
 #dform_container input,
 #dform_container select {
-  height: 2.5rem;
+	height: 2.5rem;
 }
 
 #dform_container textarea {
-  min-height: 40px;
+	min-height: 40px;
 }
 
-/* Remove spin number button from input */
+
+/* Remove spin number button from input
+-----------------------------------------------*/
+
 #dform_container input::-webkit-outer-spin-button,
 #dform_container input::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
+	margin: 0;
+	-webkit-appearance: none
 }
 
-/* Style input type number as textfield */
+
+/* Style input type number as textfield
+-----------------------------------------------*/
+
 #dform_container input[type="number"] {
-  -moz-appearance: textfield;
+	-moz-appearance: textfield
 }
+
+
+/* Focus styles for inputs
+-----------------------------------------------*/
 
 #dform_container input:focus,
 #dform_container textarea:focus,
 #dform_container select:focus {
-  box-shadow: inset 0 0 0 1px;
-  -webkit-box-shadow: inset 0 0 0 1px;
-  border-color: #0b0c0c !important;
-  outline: 3px solid #fbba07; /*fd0*/
+	box-shadow: inset 0 0 0 1px;
+	-webkit-box-shadow: inset 0 0 0 1px;
+	border-color: #0b0c0c !important;
+	outline: 3px solid #fbba07;
 }
+
+
+/* Focus styles for input errors
+-----------------------------------------------*/
 
 #dform_container input.dform_fielderror:focus,
 #dform_container textarea.dform_fielderror:focus,
 #dform_container .dform_fielderror:focus {
-  box-shadow: inset 0 0 0 1px !important;
-  -webkit-box-shadow: inset 0 0 0 1px !important;
-  border-color: #0b0c0c !important;
-  outline: 3px solid #fbba07;
+	box-shadow: inset 0 0 0 1px !important;
+	-webkit-box-shadow: inset 0 0 0 1px !important;
+	border-color: #0b0c0c !important;
+	outline: 3px solid #fbba07;
 }
+
+
+/* Focus styles for custom input errors
+-----------------------------------------------*/
 
 #dform_container input.dform_fielderrorCustom:focus,
 #dform_container textarea.dform_fielderrorCustom:focus,
 #dform_container .dform_fielderrorCustom:focus {
-  box-shadow: inset 0 0 0 1px !important;
-  -webkit-box-shadow: inset 0 0 0 1px !important;
-  border-color: #0b0c0c !important;
-  outline: 3px solid #fbba07;
+	box-shadow: inset 0 0 0 1px !important;
+	-webkit-box-shadow: inset 0 0 0 1px !important;
+	border-color: #0b0c0c !important;
+	outline: 3px solid #fbba07;
 }
+
+
+/* Styles for field errors
+-----------------------------------------------*/
 
 #dform_container .dform_fielderror {
-  box-shadow: none;
-  border: solid 2px #d4351c !important;
-  outline: none;
+	box-shadow: none;
+	border: solid 2px #d4351c !important;
+	outline: none;
 }
+
+
+/* Styles for custom field errors
+-----------------------------------------------*/
 
 #dform_container .dform_fielderrorCustom {
-  box-shadow: none;
-  border: solid 2px #d4351c !important;
-  outline: none;
+	box-shadow: none;
+	border: solid 2px #d4351c !important;
+	outline: none;
 }
+
+
+/* Remove box shadow from search widget errors
+-----------------------------------------------*/
 
 #dform_container .dform_widgeterror {
-  box-shadow: none !important;
+	box-shadow: none !important;
 }
 
+
+/* Customise validation errors
+-----------------------------------------------*/
+
 #dform_container .dform_validationMessage {
-  color: #d4351c;
-  padding-bottom: 15px !important;
-  font-weight: 700;
-  line-height: 1.2rem;
+	color: #d4351c;
+	padding-bottom: 15px !important;
+	font-weight: 700;
+	line-height: 1.2rem;
 }
 
 #dform_container input[readonly],
 #dform_container textarea[readonly] {
-  background: #ddd;
+	background: #DDD;
 }
 
-/* Fixed width input classes */
+
+/* txta-length
+-----------------------------------------------*/
+
+.txta-length-message {
+	width: 100%;
+	height: 22px;
+	position: relative;
+	top: -6px;
+}
+
+
+/* Fixed width input classes
+-----------------------------------------------*/
 
 #dform_container .input-width-30 input,
 #dform_container input.input-width-30 {
-  max-width: 59ex;
+	max-width: 59ex
 }
 
 #dform_container .input-width-20 input,
 #dform_container input.input-width-20 {
-  max-width: 41ex;
+	max-width: 41ex
 }
 
 #dform_container .input-width-10 input,
 #dform_container input.input-width-10 {
-  max-width: 23ex;
+	max-width: 23ex
 }
 
 #dform_container .input-width-5 input,
 #dform_container input.input-width-5 {
-  max-width: 10.8ex;
+	max-width: 10.8ex
 }
 
 #dform_container .input-width-4 input,
 #dform_container input.input-width-4 {
-  max-width: 9ex;
+	max-width: 9ex
 }
 
 #dform_container .input-width-3 input,
 #dform_container input.input-width-3 {
-  max-width: 7.2ex;
+	max-width: 7.2ex
 }
 
 #dform_container .input-width-2 input,
 #dform_container input.input-width-2 {
-  max-width: 5.4ex;
+	max-width: 5.4ex
 }
 
-/* Remove defualt border from fieldsets and one to many pages */
+
+/* Field overides end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Fieldset and one to many overides start
+-----------------------------------------------
+*/
+
+
+/* Remove defualt border from fieldsets and one to many pages
+-----------------------------------------------*/
 
 #dform_container fieldset,
-#dform_container div[data-type="child"],
-#dform_container div[data-type="onetomany"] {
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
+#dform_container div[data-type=child],
+#dform_container div[data-type=onetomany] {
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border-radius: 0 !important;
 }
 
-/* Add top border to child container */
 
-#dform_container div[data-type="child"] {
-  border-top: 1px solid #aaaaaa !important;
-  margin-top: 20px !important;
-  padding-top: 20px !important;
+/* Add top border to child container
+-----------------------------------------------*/
+
+#dform_container div[data-type=child] {
+	border-top: 1px solid #aaaaaa !important;
+	margin-top: 20px !important;
+	padding-top: 20px !important;
 }
+
+
+/* Resize font for delete icon
+-----------------------------------------------*/
 
 #dform_container .otom_delete {
-  font-size: 1rem;
+	font-size: 1rem;
 }
+
+
+/* Add some text after the icon
+-----------------------------------------------*/
 
 #dform_container .otom_delete::after {
-  content: "Remove";
-  font-family: "Roboto", sans-serif;
-  margin-left: 5px;
+	content: "Remove";
+	font-family: "Roboto", sans-serif;
+	margin-left: 5px;
 }
+
+
+/* Fieldset and one to many overides end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Search widget start
+-----------------------------------------------
+*/
 
 #dform_container .searchwidget {
-  /* padding: 10px !important;
+	/* padding: 10px !important;
     border-left: 5px solid #0077b4 !important; */
-  margin-bottom: 15px !important;
+	margin-bottom: 15px !important;
 }
 
-/* Hide progress bar on file upload */
+
+/* Resize search widget legends
+-----------------------------------------------*/
+
+#dform_container fieldset.searchwidget>legend {
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+
+
+/* Replace icon on search widget with text
+-----------------------------------------------*/
+
+#dform_container .dform_widget_search_closeresults {
+	font-family: "Roboto", sans-serif;
+	cursor: pointer;
+	margin: 0;
+	display: inline-block;
+}
+
+
+/* Search widget end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ File upload start
+-----------------------------------------------
+*/
+
+
+/* Hide progress bar */
 
 #dform_container .dform_fileupload_progressbar {
-  display: none !important;
+	display: none !important;
 }
 
-/* Custom radio and checkboxes with large hit areas */
 
-/* Span or div for each radio and checkbox  */
-#dform_container .dform_widget_type_checkbox div,
+/* File upload end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Custom radio and checkboxes start
+-----------------------------------------------
+*/
+
+
+/* Span or div for each radio and checkbox 
+-----------------------------------------------*/
+
+#dform_container .dform_widget_type_checkbox div>span,
 #dform_container .checkboxgroup span,
 #dform_container .radiogroup span {
-  line-height: 1.25;
-  display: block;
-  position: relative;
-  min-height: 40px;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  padding-left: 40px;
+	line-height: 1.25;
+	display: block;
+	position: relative;
+	min-height: 40px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	padding-left: 40px;
 }
 
-/* Hide br from horizonally aligned options as it creates uneccessary extra space */
+
+/* Hide br from horizonally aligned options as it creates uneccessary extra space 
+-----------------------------------------------*/
+
 #dform_container .checkboxgroup span br,
 #dform_container .radiogroup span br {
-  display: none;
+	display: none;
 }
 
-/* The input element - it's the width of the area */
-#dform_container .dform_widget_type_checkbox > div input[type="checkbox"],
-#dform_container .checkboxgroup > span input[type="checkbox"],
-#dform_container .radiogroup > span input[type="radio"] {
-  cursor: pointer;
-  position: absolute;
-  z-index: 1;
-  top: -2px;
-  left: -2px;
-  width: 44px;
-  height: 44px;
-  margin: 0;
-  opacity: 0;
+
+/* The input element - it's the width of the area 
+-----------------------------------------------*/
+
+#dform_container .dform_widget_type_checkbox>div>span input[type="checkbox"],
+#dform_container .checkboxgroup>span input[type="checkbox"],
+#dform_container .radiogroup>span input[type="radio"] {
+	cursor: pointer;
+	position: absolute;
+	z-index: 1;
+	top: -2px;
+	left: -2px;
+	width: 44px;
+	height: 44px;
+	margin: 0;
+	opacity: 0;
 }
 
-/* Position the label */
-#dform_container .dform_widget_type_checkbox > div label,
-#dform_container .checkboxgroup > span label,
-#dform_container .radiogroup > span label {
-  margin-right: 0;
-  margin-left: 0;
-  display: block;
-  margin-bottom: 0;
-  padding: 8px 15px 5px;
-  cursor: pointer;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
+
+/* Position the label 
+-----------------------------------------------*/
+
+#dform_container .dform_widget_type_checkbox>div>span label,
+#dform_container .checkboxgroup>span label,
+#dform_container .radiogroup>span label {
+	margin-right: 0;
+	margin-left: 0;
+	display: block;
+	margin-bottom: 0;
+	padding: 11px 15px 10px;
+	cursor: pointer;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
 }
 
-/* Style the radio hit area */
-#dform_container .radiogroup > span label:before {
-  content: "";
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  background: transparent;
+
+/* Style the radio hit area 
+-----------------------------------------------*/
+
+#dform_container .radiogroup>span label:before {
+	content: "";
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border: 2px solid currentColor;
+	border-radius: 50%;
+	background: transparent;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
-#dform_container .radiogroup > span label:after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 0;
-  height: 0;
-  border: 10px solid currentColor;
-  border-radius: 50%;
-  opacity: 0;
-  background: currentColor;
+
+/* Create the indicator (the dot/circle - hidden when not checked)
+-----------------------------------------------*/
+
+#dform_container .radiogroup>span label:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 0;
+	height: 0;
+	border: 10px solid currentColor;
+	border-radius: 50%;
+	opacity: 0;
+	background: currentColor;
 }
 
-/* Style the checkbox hit area */
-#dform_container .dform_widget_type_checkbox > div label:before,
-#dform_container .checkboxgroup > span label:before {
-  content: "";
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid currentColor;
-  background: transparent;
+
+/* Style the checkbox hit area 
+-----------------------------------------------*/
+
+#dform_container .dform_widget_type_checkbox>div>span label:before,
+#dform_container .checkboxgroup>span label:before {
+	content: "";
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border: 2px solid currentColor;
+	background: transparent;
 }
 
-/* Create the indicator (tick - hidden when not checked) */
-#dform_container .dform_widget_type_checkbox > div label:after,
-#dform_container .checkboxgroup > span label:after {
-  content: "";
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  top: 11px;
-  left: 9px;
-  width: 23px;
-  height: 12px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  border: solid;
-  border-width: 0 0 5px 5px;
-  border-top-color: transparent;
-  opacity: 0;
-  background: transparent;
+
+/* Create the indicator (tick - hidden when not checked)
+-----------------------------------------------*/
+
+#dform_container .dform_widget_type_checkbox>div>span label:after,
+#dform_container .checkboxgroup>span label:after {
+	content: "";
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 11px;
+	left: 9px;
+	width: 23px;
+	height: 12px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	border: solid;
+	border-width: 0 0 5px 5px;
+	border-top-color: transparent;
+	opacity: 0;
+	background: transparent;
 }
 
-/* The focus style */
-#dform_container
-  .dform_widget_type_checkbox
-  > div
-  input[type="checkbox"]:focus
-  + label:before,
-#dform_container
-  .checkboxgroup
-  > span
-  input[type="checkbox"]:focus
-  + label:before,
-#dform_container .radiogroup > span input[type="radio"]:focus + label:before {
-  border-width: 3px;
-  -webkit-box-shadow: 0 0 0 3px #fbba07;
-  box-shadow: 0 0 0 3px #fbba07;
+
+/* The focus style 
+-----------------------------------------------*/
+
+#dform_container .dform_widget_type_checkbox>div>span input[type="checkbox"]:focus+label:before,
+#dform_container .checkboxgroup>span input[type="checkbox"]:focus+label:before,
+#dform_container .radiogroup>span input[type="radio"]:focus+label:before {
+	border-width: 3px;
+	-webkit-box-shadow: 0 0 0 3px #fbba07;
+	box-shadow: 0 0 0 3px #fbba07;
 }
 
-/* Show the indicator (dot/circle or tick) when checked */
-#dform_container
-  .dform_widget_type_checkbox
-  > div
-  input[type="checkbox"]:checked
-  + label:after,
-#dform_container
-  .checkboxgroup
-  > span
-  input[type="checkbox"]:checked
-  + label:after,
-#dform_container .radiogroup > span input[type="radio"]:checked + label:after {
-  opacity: 1;
+
+/* Show the indicator (dot/circle or tick) when checked
+-----------------------------------------------*/
+
+#dform_container .dform_widget_type_checkbox>div>span input[type="checkbox"]:checked+label:after,
+#dform_container .checkboxgroup>span input[type="checkbox"]:checked+label:after,
+#dform_container .radiogroup>span input[type="radio"]:checked+label:after {
+	opacity: 1;
 }
 
-/* Customise the help text and position below label for checkbox */
+
+/* Customise the help text and position below label for checkbox  
 #dform_container .dform_widget_type_checkbox > div .helptext {
-  position: absolute;
-  top: 32px;
-  left: 15px;
+    position: absolute;
+    top: 32px;
+    left:15px;
+}*/
+
+
+/* Customise the validation message and position left above checkbox 
+#dform_container .dform_widget_type_checkbox > div .dform_validationMessage{
+    position: absolute;
+    top: -28px;
+    left:-40px;
+    display: none;
+    
+}*/
+
+
+/* Add red border to input that are required when there is an error
+-----------------------------------------------*/
+
+#dform_container input[type="radio"].dform_fielderror+label:before,
+#dform_container input[type="checkbox"].dform_fielderror+label:before {
+	border: solid 2px #d4351c !important;
 }
 
-/* Customise the validation message and position left above checkbox */
-#dform_container .dform_widget_type_checkbox > div .dform_validationMessage {
-  position: absolute;
-  top: -28px;
-  left: -40px;
-  display: none;
+
+/* Add red border to input that are required when there is an error
+-----------------------------------------------*/
+
+#dform_container input[type="radio"].dform_fielderror:focus+label:before,
+#dform_container input[type="checkbox"].dform_fielderror:focus+label:before {
+	border: solid 3px #0b0c0c !important;
 }
 
-/* Add red border to input that are required when there is an error*/
-#dform_container input[type="radio"].dform_fielderror + label:before,
-#dform_container input[type="checkbox"].dform_fielderror + label:before {
-  border: solid 2px #d4351c !important;
+
+/* Disabled style 
+-----------------------------------------------*/
+
+#dform_container .dform_widget_type_checkbox>div>span input[type="checkbox"],
+#dform_container .checkboxgroup>span input[type="checkbox"],
+#dform_container .radiogroup>span input[type="radio"] {
+	cursor: default
 }
 
-/* Add red border to input that are required when there is an error*/
-#dform_container input[type="radio"].dform_fielderror:focus + label:before,
-#dform_container input[type="checkbox"].dform_fielderror:focus + label:before {
-  border: solid 3px #0b0c0c !important;
+#dform_container .dform_widget_type_checkbox>div>span input[type="checkbox"]:disabled+label,
+#dform_container .checkboxgroup>span input[type="checkbox"]:disabled+label,
+#dform_container .radiogroup>span input[type="radio"]:disabled+label {
+	opacity: .5;
+	cursor: default
 }
 
-/* Inset text */
+
+/* Small checkboxes and radios -----------------*/
+
+
+/* Span or div for each radio and checkbox
+-----------------------------------------------*/
+
+#dform_container .checkboxes-small.dform_widget_type_checkbox div>span,
+#dform_container .checkboxes-small .checkboxgroup span,
+#dform_container .radios-small .radiogroup span {
+	min-height: 0;
+	margin-bottom: 0;
+	padding-left: 34px;
+}
+
+#dform_container .checkboxes-small.dform_widget_type_checkbox div>span:after,
+#dform_container .checkboxes-small .checkboxgroup span:after,
+#dform_container .radios-small .radiogroup span:after {
+	content: "";
+	display: block;
+	clear: both
+}
+
+
+/* The input element - it's the width of the area
+-----------------------------------------------*/
+
+#dform_container .checkboxes-small.dform_widget_type_checkbox>div>span input[type="checkbox"],
+#dform_container .checkboxes-small .checkboxgroup>span input[type="checkbox"],
+#dform_container .radios-small .radiogroup>span input[type="radio"] {
+	left: -10px
+}
+
+
+/* Position the label
+-----------------------------------------------*/
+
+#dform_container .checkboxes-small.dform_widget_type_checkbox>div>span label,
+#dform_container .checkboxes-small .checkboxgroup>span label,
+#dform_container .radios-small .radiogroup>span label {
+	margin-top: -2px;
+	padding: 11px 15px 10px 1px;
+}
+
+
+/* Style the radio hit area 
+-----------------------------------------------*/
+
+#dform_container .radios-small .radiogroup>span label:before {
+	top: 8px;
+	width: 24px;
+	height: 24px
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked)
+-----------------------------------------------*/
+
+#dform_container .radios-small .radiogroup>span label:after {
+	top: 15px;
+	left: 7px;
+	border-width: 5px
+}
+
+
+/* Style the checkbox hit area
+-----------------------------------------------*/
+
+#dform_container .checkboxes-small.dform_widget_type_checkbox>div>span label:before,
+#dform_container .checkboxes-small .checkboxgroup>span label:before {
+	top: 8px;
+	width: 24px;
+	height: 24px
+}
+
+
+/* Create the indicator (the tick - hidden when not checked)
+-----------------------------------------------*/
+
+#dform_container .checkboxes-small.dform_widget_type_checkbox>div>span label:after,
+#dform_container .checkboxes-small .checkboxgroup>span label:after {
+	top: 15px;
+	left: 6px;
+	width: 12px;
+	height: 6.5px;
+	border-width: 0 0 3px 3px
+}
+
+
+/* Customise the help text and position below label for checkbox
+#dform_container .checkboxes-small.dform_widget_type_checkbox > div .helptext {
+    position: absolute;
+    top: 32px;
+    left:1px;
+} */
+
+
+/* Customise the validation message and position left above checkbox 
+#dform_container .checkboxes-small.dform_widget_type_checkbox > div .dform_validationMessage{
+    position: absolute;
+    top: -28px;
+    left:-35px;
+    display: none;
+    
+}*/
+
+
+/* Custom chexboxes and radios end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Details component start
+-----------------------------------------------
+*/
+
+.details {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.25;
+	color: #0b0c0c;
+	margin-bottom: 20px;
+	display: block
+}
+
+.details__summary {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 5px;
+	padding-left: 25px;
+	color: #0077b4;
+	cursor: pointer
+}
+
+.details__summary:hover {
+	color: #044a7c;
+}
+
+.details__summary:focus {
+	outline: 3px solid transparent;
+	color: #0b0c0c;
+	background-color: none;
+	-webkit-box-shadow: 0 0 0 2px #fbba07;
+	box-shadow: 0 0 0 2px #fbba07;
+	text-decoration: underline
+}
+
+.details__summary-text {
+	text-decoration: underline
+}
+
+.details__summary:focus .details__summary-text {
+	text-decoration: none
+}
+
+.details__summary::-webkit-details-marker {
+	display: none
+}
+
+.details__summary:before {
+	content: "";
+	position: absolute;
+	top: -1px;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent;
+	-webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+	border-width: 7px 0 7px 12.124px;
+	border-left-color: inherit
+}
+
+.details[open]>.details__summary:before {
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent;
+	-webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+	clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+	border-width: 12.124px 7px 0 7px;
+	border-top-color: inherit
+}
+
+.details__text {
+	padding: 15px;
+	padding-left: 20px;
+	border-left: 5px solid #b1b4b6
+}
+
+.details__text p {
+	margin-top: 0;
+	margin-bottom: 20px
+}
+
+.details__text>:last-child {
+	margin-bottom: 0
+}
+
+
+/* Detail componet end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Inset text component start
+-----------------------------------------------
+*/
 
 .inset-text {
-  padding: 15px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  clear: both;
-  border-left: 10px solid #b1b4b6;
+	padding: 15px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	clear: both;
+	border-left: 10px solid #b1b4b6
 }
 
 .inset-info {
-  border-color: #5694ca;
-  background-color: #eef4fa;
+	border-color: #5694ca;
+	background-color: #eef4fa;
 }
 
 @media (max-width: 768px) {
-  .inset-text {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+	.inset-text {
+		margin-top: 20px;
+		margin-bottom: 20px
+	}
 }
 
-/* Warning text */
+
+/* Detail componet end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Alerts start
+-----------------------------------------------
+*/
+
+#dform_container .dform_info,
+#dform_container .dform_success,
+#dform_container .dform_warning,
+#dform_container .dform_error {
+	border-radius: 0px;
+}
+
+
+/* Alerts end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Summary start
+-----------------------------------------------
+*/
+
+#dform_container .summary-heading {
+	font-size: 1.75rem !important;
+	margin-top: 30px !important;
+	margin-bottom: 20px !important;
+}
+
+@media screen and (max-width: 959px) {
+	#dform_container .summary-heading {
+		font-size: 1.3125rem !important;
+		margin-top: 20px !important;
+		margin-bottom: 15px !important;
+	}
+}
+
+#dform_container .summary-fieldset:after {
+	content: "";
+	/* This is necessary for the pseudo element to work. */
+	display: block;
+	/* This will put the pseudo element on its own line. */
+	width: 74.05%;
+	/* Change this to whatever width you want. */
+	/* padding-top: 20px;  This creates some space between the element and the border. */
+	border-bottom: 1px solid black;
+	/* This creates the border. Replace black with whatever color you want. */
+	clear: both;
+}
+
+@media (max-width: 768px) {
+	#dform_container .summary-fieldset:after {
+		width: 100%;
+	}
+}
+
+/* Summary end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Warning text component start
+-----------------------------------------------
+*/
 
 .warning-text {
-  position: relative;
-  margin-bottom: 25px;
-  padding: 10px 0;
+	position: relative;
+	margin-bottom: 25px;
+	padding: 10px 0
 }
 
 .warning-text__assistive {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  clip: rect(0 0 0 0) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  border: 0 !important;
-  white-space: nowrap !important;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	border: 0 !important;
+	white-space: nowrap !important
 }
 
 .warning-text__icon {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  min-width: 35px;
-  min-height: 35px;
-  margin-top: -7px;
-  border: 3px solid #0b0c0c;
-  border-radius: 50%;
-  color: #fff;
-  background: #0b0c0c;
-  font-size: 30px;
-  line-height: 29px;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 700;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	min-width: 35px;
+	min-height: 35px;
+	margin-top: -7px;
+	border: 3px solid #0b0c0c;
+	border-radius: 50%;
+	color: #fff;
+	background: #0b0c0c;
+	font-size: 30px;
+	line-height: 29px;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
 }
 
 .warning-text__text {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.25;
-  color: #0b0c0c;
-  display: block;
-  padding-left: 45px;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.25;
+	color: #0b0c0c;
+	display: block;
+	padding-left: 45px
 }
 
-/* Panel */
+/* Warning text end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Panel start
+-----------------------------------------------
+*/
 
 .panel {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-bottom: 15px;
-  padding: 35px;
-  border: 5px solid transparent;
-  text-align: left;
-}
-
-.panel-success {
-  color: #fff;
-  background: #d4edda;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+	padding: 35px;
+	border: 5px solid transparent;
+	text-align: left
 }
 
 .panel-heading {
-  margin-top: 0;
-  margin-bottom: 30px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  font-size: 48px !important;
-  font-size: 3rem;
-  line-height: 1.04167;
+	margin-top: 0 !important;
+	margin-bottom: 30px !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 700;
+	font-size: 48px;
+	font-size: 3rem;
+	margin: 2rem 0 1.5rem !important;
 }
 
 .panel-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 19px;
-  font-size: 1.1875rem;
-  line-height: 1.31579;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 19px;
+	font-size: 1.1875rem;
+	line-height: 1.31579;
+}
+
+.panel-confirmation {
+	color: #fff;
+	background: #DFF2BF;
 }
 
 @media (max-width: 768px) {
-  .panel {
-    padding: 25px;
-  }
-
-  .panel-heading {
-    font-size: 32px !important;
-    font-size: 2rem;
-    line-height: 1.09375;
-  }
-
-  .panel-body {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
-  }
+	.panel {
+		padding: 25px
+	}
+	.panel-heading {
+		font-size: 32px !important;
+		font-size: 2rem;
+		line-height: 1.09375
+	}
+	.panel-body {
+		font-size: 16px;
+		font-size: 1rem;
+		line-height: 1.25;
+	}
 }
 
-/* Utility classes */
+/* Panel end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+ Utilitiy classes start
+-----------------------------------------------
+*/
 
 input.width-three-quarters,
 select.width-three-quarters,
@@ -1403,18 +1860,18 @@ textarea.width-three-quarters,
 .width-three-quarters input,
 .width-three-quarters select,
 .width-three-quarters textarea {
-  width: 75% !important;
+	width: 75% !important
 }
 
 @media (max-width: 768px) {
-  input.width-three-quarters,
-  select.width-three-quarters,
-  textarea.width-three-quarters,
-  .width-three-quarters input,
-  .width-three-quarters select,
-  .width-three-quarters textarea {
-    width: 100% !important;
-  }
+	input.width-three-quarters,
+	select.width-three-quarters,
+	textarea.width-three-quarters,
+	.width-three-quarters input,
+	.width-three-quarters select,
+	.width-three-quarters textarea {
+		width: 100% !important
+	}
 }
 
 input.width-two-thirds,
@@ -1423,18 +1880,18 @@ textarea.width-two-thirds,
 .width-two-thirds input,
 .width-two-thirds select,
 .width-two-thirds textarea {
-  width: 66.66% !important;
+	width: 66.66% !important
 }
 
 @media (max-width: 768px) {
-  input.width-two-thirds,
-  select.width-two-thirds,
-  textarea.width-two-thirds,
-  .width-two-thirds input,
-  .width-two-thirds select,
-  .width-two-thirds textarea {
-    width: 100% !important;
-  }
+	input.width-two-thirds,
+	select.width-two-thirds,
+	textarea.width-two-thirds,
+	.width-two-thirds input,
+	.width-two-thirds select,
+	.width-two-thirds textarea {
+		width: 100% !important
+	}
 }
 
 input.width-one-half,
@@ -1443,18 +1900,18 @@ textarea.width-one-half,
 .width-one-half input,
 .width-one-half select,
 .width-one-half textarea {
-  width: 50% !important;
+	width: 50% !important
 }
 
 @media (max-width: 768px) {
-  input.width-one-half,
-  select.width-one-half,
-  textarea.width-one-half,
-  .width-one-half input,
-  .width-one-half select,
-  .width-one-half textarea {
-    width: 100% !important;
-  }
+	input.width-one-half,
+	select.width-one-half,
+	textarea.width-one-half,
+	.width-one-half input,
+	.width-one-half select,
+	.width-one-half textarea {
+		width: 100% !important
+	}
 }
 
 input.width-one-third,
@@ -1463,18 +1920,18 @@ textarea.width-one-third,
 .width-one-third input,
 .width-one-third select,
 .width-one-third textarea {
-  width: 33.33% !important;
+	width: 33.33% !important
 }
 
 @media (max-width: 768px) {
-  input.width-one-third,
-  select.width-one-third,
-  textarea.width-one-third,
-  .width-one-third input,
-  .width-one-third select,
-  .width-one-third textarea {
-    width: 100% !important;
-  }
+	input.width-one-third,
+	select.width-one-third,
+	textarea.width-one-third,
+	.width-one-third input,
+	.width-one-third select,
+	.width-one-third textarea {
+		width: 100% !important
+	}
 }
 
 input.width-one-quarter,
@@ -1483,103 +1940,169 @@ textarea.width-one-quarter,
 .width-one-quarter input,
 .width-one-quarter select,
 .width-one-quarter textarea {
-  width: 25% !important;
+	width: 25% !important
 }
 
 @media (max-width: 768px) {
-  input.width-one-quarter,
-  select.width-one-quarter,
-  textarea.width-one-quarter,
-  .width-one-quarter input,
-  .width-one-quarter select,
-  .width-one-quarter textarea {
-    width: 100% !important;
-  }
+	input.width-one-quarter,
+	select.width-one-quarter,
+	textarea.width-one-quarter,
+	.width-one-quarter input,
+	.width-one-quarter select,
+	.width-one-quarter textarea {
+		width: 100% !important
+	}
+}
+
+.border {
+	border: 1px solid #bfc1c3!important;
+}
+
+.border-top {
+	border-top: 1px solid #bfc1c3!important;
+}
+
+.border-right {
+	border-right: 1px solid #bfc1c3!important;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #bfc1c3!important;
+}
+
+.border-left {
+	border-left: 1px solid #bfc1c3!important;
+}
+
+.padding-5 {
+	padding: 5px !important;
+}
+
+.padding-10 {
+	padding: 10px !important;
+}
+
+.padding-15 {
+	padding: 15px !important;
+}
+
+.padding-20 {
+	padding: 20px !important;
+}
+
+.padding-25 {
+	padding: 25px !important;
+}
+
+.padding-30 {
+	padding: 30px !important;
 }
 
 .margin-top-0 {
-  margin-top: 0 !important;
+	margin-top: 0 !important;
 }
 
 .margin-top-10 {
-  margin-top: 10px !important;
+	margin-top: 10px !important;
 }
 
 .margin-top-15 {
-  margin-top: 15px !important;
+	margin-top: 15px !important;
 }
 
 .margin-top-20 {
-  margin-top: 20px !important;
+	margin-top: 20px !important;
 }
 
 .margin-top-25 {
-  margin-top: 25px !important;
+	margin-top: 25px !important;
 }
 
 .margin-top-30 {
-  margin-top: 30px !important;
+	margin-top: 30px !important;
 }
 
 .margin-right-0 {
-  margin-right: 0 !important;
+	margin-right: 0 !important;
 }
 
 .margin-right-10 {
-  margin-right: 10px !important;
+	margin-right: 10px !important;
 }
 
 .margin-right-15 {
-  margin-right: 15px !important;
+	margin-right: 15px !important;
 }
 
 .margin-right-20 {
-  margin-right: 20px !important;
+	margin-right: 20px !important;
 }
 
 .margin-bottom-0 {
-  margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 .margin-bottom-10 {
-  margin-bottom: 10px !important;
+	margin-bottom: 10px !important;
 }
 
 .margin-bottom-15 {
-  margin-bottom: 15px !important;
+	margin-bottom: 15px !important;
 }
 
 .margin-bottom-20 {
-  margin-bottom: 20px !important;
+	margin-bottom: 20px !important;
 }
 
 .margin-bottom-25 {
-  margin-bottom: 25px !important;
+	margin-bottom: 25px !important;
 }
 
 .margin-bottom-30 {
-  margin-bottom: 30px !important;
+	margin-bottom: 30px !important;
 }
 
 .sr-only,
 .sr-only-label label,
 .sr-only-legend legend {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	border: 0;
+}
+
+.display-none {
+	display: none!important;
 }
 
 .float-left {
-  float: left !important;
+	float: left !important;
 }
 
 .float-right {
-  float: right !important;
+	float: right !important;
 }
+
+.visibility-hidden {
+	visibility: hidden;
+}
+
+.visibility-visible {
+	visibility: visible;
+}
+
+.example {
+	padding: 30px !important;
+	border: 1px solid #bfc1c3
+}
+
+.padding-top-30 {
+	padding-top: 30px !important;
+}
+
