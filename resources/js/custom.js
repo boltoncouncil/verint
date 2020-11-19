@@ -360,7 +360,7 @@ function applyNewStyle() {
 		[".txta-gov"],
 		// [".file-gov"],
 		[".search-gov"],
-		[".detail-gov"],
+		//[".detail-gov"],
 		[".search-no-results"],
 		[".required-notice"],
 		//KS: grouped class names
@@ -393,7 +393,7 @@ function applyNewStyle() {
 	commonRegex();
 
 	/*add in accordion for customer search widget. The widget name must be cs_customer_search*/
-	/*if (KDF.getVal("txt_customerID") || KDF.getVal("txt_customer_id")) {
+	if (KDF.getVal("txt_customerID") || KDF.getVal("txt_customer_id")) {
 		console.log("nih:" + KDF.getVal("txt_customerID"));
 		$("#dform_widget_cs_customer_search_searchcontainer").wrap(
 			"<details closed></details>"
@@ -409,7 +409,7 @@ function applyNewStyle() {
 		$("#dform_widget_cs_customer_search_searchcontainer").before(
 			"<summary>Search for indvidual</summary>"
 		);
-	}*/
+	}
 
 	//KS: trigger: '_style_styleApplied, [elementSelectorsUsed, hadDefaultsInArray]'
 	$(formName()).trigger("_style_styleApplied", [
