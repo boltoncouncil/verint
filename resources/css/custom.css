@@ -1211,6 +1211,10 @@ h6,
 -----------------------------------------------
 */
 
+#dform_container #dform_files_link {
+    display: inline;
+    margin-bottom: 0;
+}
 
 #dform_container #dform_files {
     border: 0;
