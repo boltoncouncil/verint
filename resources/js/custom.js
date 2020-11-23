@@ -1309,3 +1309,12 @@ function replaceHeader(className, tag) {
 		}
 	});
 }
+
+function setSearchWidgetNotRequired(widget) {
+     $('.dform_widget_'+widget).find('.searchwidget').attr('data-required',false).removeClass("dform_widgeterror");
+     $('.dform_widget_'+widget).find('.searchwidget').find(".dform_validationMessage").first().hide();
+}
+
+function setSearchWidgetRequired(widget) {
+     $('.dform_widget_'+widget).find('.searchwidget').attr('data-required',true);
+} 
