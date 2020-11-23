@@ -962,7 +962,7 @@ function selectResult() {
 	//KS: BUG-FIX so that it works with 'No results returned' adding an option
 	if ($(this).children(":not([hidden])").length > 0) {
 		$(this)
-			.find("> option:first")
+			.find("option:first")
 			.attr("hidden", "")
 			.text("Please select a result...");
 	}
