@@ -1838,19 +1838,64 @@ h6,
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	margin-bottom: 15px;
+	/*	margin-bottom: 15px;
 	padding: 35px;
-	border: 5px solid transparent;
-	text-align: left
+	border: 5px solid transparent; */
+	border: #fbba07 solid .375rem;
+	margin: 0 0 2.25rem;
+	padding: .75rem;
+	text-align: left;
+	position: relative;
+}
+
+@media screen and (min-width: 600px) {
+	.panel {
+		border-left-width: 4.5rem;
+		min-height: 5rem;
+	}
+}
+
+.panel::before {
+	background-size: contain;
+	content: '';
+	display: inline-block;
+	height: 2.5rem;
+	margin: -.25rem .75rem .25rem -.25rem;
+	position: relative;
+	vertical-align: middle;
+	width: 2.5rem
+}
+
+@media screen and (min-width: 600px) {
+	.panel::before {
+		display: block;
+		float: none;
+		left: -3.25rem;
+		margin: .875rem 0 0;
+		position: absolute;
+		top: 0
+	}
+}
+
+@media screen and (min-width: 1032px) {
+	.panel::before {
+		margin: 0;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%)
+	}
 }
 
 .panel-heading {
+	margin-top: 0 !important;
+	margin-bottom: 30px !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: 700;
 	font-size: 48px;
 	font-size: 3rem;
-	margin: 1.5rem 0 1.5rem !important;
+	margin: 2rem 0 1.5rem !important;
 }
 
 .panel-body {
@@ -1859,12 +1904,17 @@ h6,
 	font-size: 19px;
 	font-size: 1.1875rem;
 	line-height: 1.31579;
-	margin-bottom:30px;
 }
 
 .panel-confirmation {
 	color: #fff;
 	background: #dcdf80;
+	border-color: #dcdf80;
+}
+
+.panel-confirmation::before {
+	background-image: url('data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2244%22%20viewBox%3D%220%200%2044%2044%22%20preserveAspectRatio%3D%22xMinYMid%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%3E%3Cpath%20d%3D%22M21.95%2C2a20%2C20%2C0%2C1%2C0%2C.11%2C0Zm0%2C37.76A17.89%2C17.89%2C0%2C1%2C1%2C39.84%2C21.86%2C17.89%2C17.89%2C0%2C0%2C1%2C21.95%2C39.76Zm-3-8.95a1.05%2C1.05%2C0%2C0%2C1-.75-.31l-7.37-7.37a1.05%2C1.05%2C0%2C0%2C1%2C1.48-1.48l6.63%2C6.63L31.58%2C15.65a1.05%2C1.05%2C0%2C0%2C1%2C1.48%2C1.48L19.68%2C30.49A1.05%2C1.05%2C0%2C0%2C1%2C18.95%2C30.81Z%22%20fill%3D%22%2310191c%22%2F%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
