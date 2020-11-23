@@ -44,8 +44,8 @@ function defineDefaultStyle() {
 		"txta-length",
 		"txta-length-listener",
 		// "detailToggle",
-		"noResultsFound",
-		"selectResult",
+		//"noResultsFound",
+		//"selectResult",
 		"reset-search",
 		"txt-enter-trigger-btn",
 		//,'search-empty-search'
