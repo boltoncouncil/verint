@@ -949,8 +949,9 @@ function detailToggle() {
 function noResultsFound() {
 	//KS: when there is no results, add a non-selectable option to say such
 	var text = "No results found";
-	if ($(this).children().length < 1) {
-		$(this).html("<option hidden>" + text + "</option>");
+	if ($(this).has('option').length < 1) {
+	     console.log('noResultsFound1');
+		$(this).html("<optgroup><option hidden>" + text + "</option></optgroup>");
 	}
 	//KS: trigger: '_style_noSearchResults, [element, noResultText]'
 	$(formName()).trigger("_style_noSearchResults", [$(this), text]);
@@ -960,11 +961,11 @@ function selectResult() {
 	//KS: when there is no results, add a non-selectable option to say such
 	var text = "Please select a result...";
 	//KS: BUG-FIX so that it works with 'No results returned' adding an option
-	if ($(this).children(":not([hidden])").length > 0) {
+	if ($(this).has('option:not([hidden]').length > 0) {
 		$(this)
 			.find("option:first")
 			.attr("hidden", "")
-			.text("Please select a result...");
+			.text(text);
 	}
 	//KS: trigger: '_style_selectResult, [element, selectResult]'
 	$(formName()).trigger("_style_selectResult", [$(this), text]);
