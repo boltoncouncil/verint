@@ -951,7 +951,7 @@ function noResultsFound() {
 	var text = "No results found";
 	if ($(this).has('option').length < 1) {
 	     console.log('noResultsFound1');
-		$(this).html("<optgroup><option hidden>" + text + "</option></optgroup>");
+		$(this).html("<optgroup><option value hidden>" + text + "</option></optgroup>");
 	}
 	//KS: trigger: '_style_noSearchResults, [element, noResultText]'
 	$(formName()).trigger("_style_noSearchResults", [$(this), text]);
