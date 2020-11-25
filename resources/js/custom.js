@@ -1296,8 +1296,9 @@ CODE TO MERGE under structure
 function replaceHeader(className, tag) {
 	$('.' + className).each(function () {
 		var id = $(this).attr('id');
-		console.log(id);
-		if (id && id != 'dform_ref_display') {
+		
+		if (id && id !== 'dform_ref_display') {
+			console.log(id);
 			var header = document.getElementById(id);
 			var newHeader = document.createElement(tag);
 			var attrs = header.attributes;
