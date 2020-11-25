@@ -319,13 +319,13 @@ h6,
 -----------------------------------------------
 */
 
-#dform_container h3#dform_ref_display {
+#dform_container #dform_ref_display {
 	font-size: 1.75rem !important;
 	margin: 2rem 0 0 !important;
 }
 
 @media screen and (max-width: 959px) {
-	 #dform_container h3#dform_ref_display {
+	 #dform_container #dform_ref_display {
 		font-size: 1.3125rem !important;
 	}
 }
