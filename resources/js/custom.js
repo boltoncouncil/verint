@@ -63,12 +63,12 @@ function defineDefaultStyle() {
 
 function defaultNewStyle(elements) {
 
-	replaceHeader('header1', 'h1');
-	replaceHeader('header2', 'h2');
-	replaceHeader('header3', 'h3');
-	replaceHeader('header4', 'h4');
-	replaceHeader('header5', 'h5');
-	replaceHeader('header6', 'h6');
+	//replaceHeader('header1', 'h1');
+	//replaceHeader('header2', 'h2');
+	//replaceHeader('header3', 'h3');
+	//replaceHeader('header4', 'h4');
+	//replaceHeader('header5', 'h5');
+	//replaceHeader('header6', 'h6');
 
 	//KS: adds styling to elemnts in an inefficent mannor but without the need to access custom.css
 	//KS: adds the classes that are used for styling as well as for indication where functionility should be added in applyNewStyle
