@@ -500,7 +500,7 @@ var listenerFunctions = {
 		$(formName()).trigger('_style_listenerAdded',['noResultsFound']);	
 	},
 	'selectResult':function(){
-		log('within selectResult listenerFunction');
+		console.log('within selectResult listenerFunction');
 		$(formName()).on('_KDF_search', function(event, kdf, response, type, name) {
 			//KS: call selectResult with 'this' set to the search element that triggered the event
 			selectResult.call($('[name="'+name+'_id"]'))
@@ -509,7 +509,7 @@ var listenerFunctions = {
 		$(formName()).trigger('_style_listenerAdded',['selectResult']);	
 	},
 	'txt-enter-trigger-btn':function(){
-		log('txt-enter-trigger-btn called - disabled for testing')
+		console.log('txt-enter-trigger-btn called - disabled for testing')
 		$(formName()).on('keypress','.search-gov [type="text"], .txt-enter-trigger-btn [type="text"]',function() {
 			if (event.keyCode == 13) {
 				$(this).parent().parent().parent().find('[type="button"]').trigger('click');
