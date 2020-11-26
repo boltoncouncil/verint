@@ -29,8 +29,7 @@ function defineDefaultStyle(){
     //KS: adds the recommended default styling - and acts a single location to change them
 	//KS: for the love of StackExchange don't put 'all' or 'recommended' in here
     var recommended = [
-        'mchk','chk','rad','txt','dt','eml','num','pas','tel','time','txta','sel','file','btn','search','highlightRequired','search-no-results','field-label-right-align','txta-length','txta-length-listener','detailToggle','noResultsFound','selectResult','txt-enter-trigger-btn'
-//,'search-empty-search'
+        'mchk','chk','rad','txt','dt','eml','num','pas','tel','time','txta','sel','file','btn','search','highlightRequired','search-no-results','field-label-right-align','txta-length','txta-length-listener','detailToggle','noResultsFound','selectResult','txt-enter-trigger-btn','search-empty-search'
     ];
     if (debugStyle) console.debug('@defineDefaultStyle() the defined recommended styles that will be used ['+recommended.toString()+']')
     defaultNewStyle(recommended);
@@ -74,7 +73,7 @@ function defaultNewStyle(elements){
 		    case "sel":$("[data-type='select']").addClass('sel-gov');break;
 		    case "file":$("[data-type='file']").addClass('file-gov');break;
 		    case "btn":$("[data-type='button']").addClass('btn-gov');break;
-				case "search":$(".dform_widget_type_search").addClass('search-gov');break;
+			case "search":$(".dform_widget_type_search").addClass('search-gov');break;
 
 		    case "txta-length"://KS: allows optout of the maxchar feature as default
 			$("[data-type='textarea'] > div:last-child").addClass('txta-length');        
@@ -90,9 +89,9 @@ function defaultNewStyle(elements){
 		    case "sel-fill"://KS: mostly just an example of how to add optional default styles
 			$("[data-type='select']").addClass('sel-fill');
 			break;
-		    case "file-progress"://KS: add back the progress bar
-			$("[data-type='file']").addClass('file-progress');             
-			break;
+		 //    case "file-progress"://KS: add back the progress bar
+			// $("[data-type='file']").addClass('file-progress');             
+			// break;
 		    case "txt-no-min-height"://KS: bobs request to remove margin on hidden left feilds
 			$("[data-type='text']").addClass('txt-no-min-height');             
 			break;
@@ -207,7 +206,7 @@ function applyNewStyle(){
     //KS:- if there is no function name the it presumes the function name is the selector excluding the first (.)
     var elementsToUpdate = [
         //KS: single class name
-        ['.rad-gov'], ['.chk-gov'], ['.mchk-gov'], ['.warning-notice'], ['.info-notice'], ['.txta-gov'], ['.file-gov'], ['.search-gov'], ['.detail-gov'], ['.search-no-results'], ['.required-notice'],
+        ['.rad-gov'], ['.chk-gov'], ['.mchk-gov'], ['.warning-notice'], ['.info-notice'], ['.txta-gov'], ['.file-gov'], ['.search-gov'], ['.detail-gov'], ['.search-no-results'], ['.required-notice'], ['.sel-gov'],
         //KS: grouped class names
         ['.file-gov[class*="file-limit-"]','file-limit'],
         ['[data-type="text"] div:first-child .dform_hidden','txt-hidden'],
@@ -230,16 +229,15 @@ function applyNewStyle(){
 	commonRegex();
 
 	/*add in accordion for customer search widget. The widget name must be cs_customer_search*/
-	if (KDF.getVal('txt_customerID') || KDF.getVal('txt_customer_id')) {
-console.log('nih:' + KDF.getVal('txt_customerID'));
-		$('#dform_widget_cs_customer_search_searchcontainer').wrap('<details closed></details>');
-		$('#dform_widget_cs_customer_search_searchcontainer').before('<summary>Search for indvidual</summary>');
-	}else{
-console.log('nih:' + KDF.getVal('txt_customerID'));
-		$('#dform_widget_cs_customer_search_searchcontainer').wrap('<details open></details>');
+        if (KDF.getVal('txt_customerID') || KDF.getVal('txt_customer_id')) {
+                $('#dform_widget_cs_customer_search_searchcontainer').wrap('<details closed></details>');
                 $('#dform_widget_cs_customer_search_searchcontainer').before('<summary>Search for indvidual</summary>');
-	}
-		
+        }else{
+                $('#dform_widget_cs_customer_search_searchcontainer').wrap('<details open></details>');
+                $('#dform_widget_cs_customer_search_searchcontainer').before('<summary>Search for indvidual</summary>');
+        }
+
+	
 	//KS: trigger: '_style_styleApplied, [elementSelectorsUsed, hadDefaultsInArray]'
 	$(formName()).trigger('_style_styleApplied',[elementsToUpdate, (hasDefaultsInArguments) ? arguments[0] : false]);
 }
@@ -416,6 +414,21 @@ var updateStyleFunctions = {
     	    if (debugStyle) console.debug('Could not add mchk-margin to element. Try adding the class mchk-margin-# (e.g. mchk-margin-50) first')
     	}
 	},
+	'sel-gov': function(element){//AS: added "Please select..." option to select box
+        var el = element.find('select');
+        
+        if (el.find('option:first').val() === '' && el.find('option').length  > 1) {
+            el.find('option:first').val('');
+            el.find('option:first').text('Please select...');
+            el.find('option:first').removeAttr('disabled');
+            el.find('option:first').prop('hidden', true);
+        }
+        else {
+            el.find('option:first').text('No results...');
+            el.find('option:first').val('No results...');
+            el.find('option:first').prop('hidden', true);
+        }
+    },
 }
 
 function individualApplyStyle(element, specificVal){
@@ -487,7 +500,7 @@ var listenerFunctions = {
 		$(formName()).trigger('_style_listenerAdded',['noResultsFound']);	
 	},
 	'selectResult':function(){
-		console.log('within selectResult listenerFunction');
+		log('within selectResult listenerFunction');
 		$(formName()).on('_KDF_search', function(event, kdf, response, type, name) {
 			//KS: call selectResult with 'this' set to the search element that triggered the event
 			selectResult.call($('[name="'+name+'_id"]'))
@@ -496,7 +509,7 @@ var listenerFunctions = {
 		$(formName()).trigger('_style_listenerAdded',['selectResult']);	
 	},
 	'txt-enter-trigger-btn':function(){
-		console.log('txt-enter-trigger-btn called - disabled for testing')
+		log('txt-enter-trigger-btn called - disabled for testing')
 		$(formName()).on('keypress','.search-gov [type="text"], .txt-enter-trigger-btn [type="text"]',function() {
 			if (event.keyCode == 13) {
 				$(this).parent().parent().parent().find('[type="button"]').trigger('click');
@@ -592,14 +605,15 @@ function noResultsFound(){
 }
 function selectResult(){
     //KS: when there is no results, add a non-selectable option to say such
-	var text = 'Please select a result...';
+    var text = 'Please select a result…';
     //KS: BUG-FIX so that it works with 'No results returned' adding an option
     if ($(this).children(':not([hidden])').length > 0){
-	    $(this).find('option:first').attr('hidden', '').text('Please select a result...')
+        $(this).find('option:first').attr('hidden', '').text('Please select a result…')
     }
-	//KS: trigger: '_style_selectResult, [element, selectResult]'
-	$(formName()).trigger('_style_selectResult',[$(this), text]);
+    //KS: trigger: '_style_selectResult, [element, selectResult]'
+    $(formName()).trigger('_style_selectResult',[$(this), text]);
 }
+
 
 function regexSearch(regex, selector){
 	if (selector === undefined){
