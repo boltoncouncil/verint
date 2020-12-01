@@ -465,6 +465,83 @@ h6,
 
 /*
 -----------------------------------------------
+ Navigation start
+-----------------------------------------------
+*/
+
+#dform_container #dform_navigation li {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    
+}
+
+#dform_container #dform_navigation li > a {
+    background: none;
+    color: #1d70b8;
+    border: none;
+    padding: 2px 0 0 4px;
+   
+}
+
+#dform_container #dform_navigation li > a.selected {
+    color: #0077b4;
+    border: none;
+    border-left: 4px solid #0077b4;
+    margin-left: -5px;
+    font-weight: bold;
+}
+
+#dform_container #dform_navigation li > a:focus {
+    color: #333;
+    text-decoration: none;
+    box-shadow: none;
+    background: none;
+}
+
+#dform_container #dform_navigation li > a:hover {
+    color: #0077b4;
+    text-decoration: underline !important;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+#dform_container #dform_navigation li > a.selected:hover {
+    color: #0077b4 !important;
+    background: none;
+    color: #666;
+    border: none;
+    border-left: 4px solid #0077b4;
+    text-decoration: underline !important;
+}
+
+#dform_container #dform_navigation li > a span {
+   margin-left: -25px;
+   
+}
+
+#dform_container #dform_navigation .dform_pageInvalid,
+#dform_container #dform_navigation .dform_pageInvalidCustom,
+#dform_container #dform_navigation .dform_pageValid {
+    box-shadow: none;
+   
+}
+
+#dform_container #dform_navigation .dform_pageInvalid span,
+#dform_container #dform_navigation .dform_pageInvalidCustom span,
+#dform_container #dform_navigation .dform_pageValid span {
+    background-image: none;
+}
+
+/* Navigation end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
  Buttons start
 -----------------------------------------------
 */
