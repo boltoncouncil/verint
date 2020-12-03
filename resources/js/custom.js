@@ -464,7 +464,7 @@ var updateStyleFunctions = {
 		/* var el = element.find("> div").not(":has(span)");
 		 el.append('<span class="chk-check"></span>');
 		 el.find(".helptext").insertAfter(element.find("label")); */
-		//$(".dform_widget_type_checkbox :not(span) > input").next().addBack().wrapAll("<span>");
+		$(".dform_widget_type_checkbox :not(span) > input").next().addBack().wrapAll("<span>");
 
 	},
 	"file-gov": function (element) {
